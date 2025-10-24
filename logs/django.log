@@ -1,0 +1,447 @@
+INFO 2025-10-23 18:47:48,703 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 18:49:19,025 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 18:49:19,234 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 18:49:20,384 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 18:49:20,507 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 18:49:23,737 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-23 18:49:25,475 log Not Found: /
+WARNING 2025-10-23 18:49:25,475 basehttp "GET / HTTP/1.1" 404 3017
+WARNING 2025-10-23 18:49:25,712 log Not Found: /favicon.ico
+WARNING 2025-10-23 18:49:25,713 basehttp "GET /favicon.ico HTTP/1.1" 404 3068
+INFO 2025-10-23 18:49:30,664 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-10-23 18:49:30,682 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4162
+INFO 2025-10-23 18:49:30,692 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2025-10-23 18:49:30,692 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-10-23 18:49:30,693 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2025-10-23 18:49:30,792 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-10-23 18:49:30,792 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-10-23 18:49:30,792 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2025-10-23 18:49:30,794 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-10-23 18:49:37,756 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-10-23 18:49:37,764 basehttp "GET /admin/ HTTP/1.1" 200 6352
+INFO 2025-10-23 18:49:37,787 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-10-23 18:49:37,829 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-10-23 18:49:37,829 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-10-23 18:49:42,288 basehttp "GET /admin/legal_form/consultationrequest/ HTTP/1.1" 200 10014
+INFO 2025-10-23 18:49:42,313 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6811
+INFO 2025-10-23 18:49:42,314 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-10-23 18:49:42,314 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-10-23 18:49:42,315 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-10-23 18:49:42,317 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-10-23 18:49:42,318 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-10-23 18:49:42,319 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-10-23 18:49:42,320 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-23 18:49:42,321 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-10-23 18:49:42,322 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-10-23 18:49:42,323 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-10-23 18:49:42,337 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-10-23 18:49:42,347 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-10-23 18:49:42,347 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-10-23 18:49:48,095 basehttp "GET /admin/legal_form/consultationrequest/add/ HTTP/1.1" 200 12354
+INFO 2025-10-23 18:49:48,113 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+INFO 2025-10-23 18:49:48,114 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-10-23 18:49:48,115 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-23 18:49:48,141 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-10-23 18:49:48,141 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11800
+INFO 2025-10-23 18:49:51,954 basehttp "GET /admin/legal_form/consultationrequest/ HTTP/1.1" 200 10014
+INFO 2025-10-23 19:27:18,982 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-23 19:27:21,110 log Not Found: /
+WARNING 2025-10-23 19:27:21,110 basehttp "GET / HTTP/1.1" 404 3017
+INFO 2025-10-23 19:27:56,003 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/urls.py changed, reloading.
+INFO 2025-10-23 19:27:56,215 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:27:59,392 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/urls.py changed, reloading.
+INFO 2025-10-23 19:27:59,546 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:28:05,735 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/urls.py changed, reloading.
+INFO 2025-10-23 19:28:05,874 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:28:24,362 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/urls.py changed, reloading.
+INFO 2025-10-23 19:28:24,511 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-23 19:29:00,823 log Not Found: /api/schema/swagger/
+WARNING 2025-10-23 19:29:00,823 basehttp "GET /api/schema/swagger/ HTTP/1.1" 404 3470
+INFO 2025-10-23 19:29:03,216 basehttp "GET /api/docs HTTP/1.1" 301 0
+ERROR 2025-10-23 19:29:03,250 log Internal Server Error: /api/docs/
+Traceback (most recent call last):
+  File "/Users/macshop/Desktop/legal_consultation_backend/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macshop/Desktop/legal_consultation_backend/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/macshop/Desktop/legal_consultation_backend/.venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macshop/Desktop/legal_consultation_backend/.venv/lib/python3.11/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macshop/Desktop/legal_consultation_backend/.venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 159, in render
+    template = self.resolve_template(template_names)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macshop/Desktop/legal_consultation_backend/.venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 169, in resolve_template
+    return loader.select_template(template_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macshop/Desktop/legal_consultation_backend/.venv/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf_spectacular/swagger_ui.html
+ERROR 2025-10-23 19:29:03,251 basehttp "GET /api/docs/ HTTP/1.1" 500 102147
+INFO 2025-10-23 19:35:06,455 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-23 19:35:12,434 log Not Found: /
+WARNING 2025-10-23 19:35:12,434 basehttp "GET / HTTP/1.1" 404 3395
+INFO 2025-10-23 19:35:15,722 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:35:15,738 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:35:15,843 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:35:19,403 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:35:19,422 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:35:19,460 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+WARNING 2025-10-23 19:35:19,481 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:35:19,859 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:35:19,874 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:35:19,910 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:35:22,439 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:35:22,452 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:35:22,498 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:35:56,912 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:36:00,652 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:36:00,670 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:36:00,710 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:36:01,723 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:36:01,733 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:36:01,767 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:36:02,260 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:36:02,287 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:36:02,320 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:37:44,428 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:37:50,038 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:37:50,056 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:37:50,099 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:37:51,255 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:37:51,266 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:37:51,305 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:37:52,077 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:37:52,091 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:37:52,132 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:38:12,289 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 19:38:12,517 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:38:14,708 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 19:38:14,876 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:38:20,139 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:38:20,157 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:38:20,183 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:38:21,469 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:38:21,483 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:38:21,523 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:38:22,211 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:38:22,223 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:38:22,257 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:38:22,996 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:38:23,006 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:38:23,045 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:38:51,626 basehttp "GET /api/schema/ HTTP/1.1" 200 1645
+INFO 2025-10-23 19:39:08,973 basehttp "GET /api/redoc/ HTTP/1.1" 200 734
+WARNING 2025-10-23 19:39:08,989 basehttp "GET /static/drf_spectacular_sidecar/redoc/bundles/redoc.standalone.js HTTP/1.1" 404 2031
+INFO 2025-10-23 19:40:03,489 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-23 19:40:05,365 log Not Found: /
+WARNING 2025-10-23 19:40:05,365 basehttp "GET / HTTP/1.1" 404 3395
+WARNING 2025-10-23 19:40:08,578 log Not Found: /
+WARNING 2025-10-23 19:40:08,579 basehttp "GET / HTTP/1.1" 404 3395
+INFO 2025-10-23 19:40:10,451 basehttp "GET /admin/ HTTP/1.1" 200 6352
+INFO 2025-10-23 19:40:10,457 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-10-23 19:40:10,457 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-10-23 19:40:10,458 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-10-23 19:40:10,560 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-10-23 19:40:10,560 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-10-23 19:40:10,560 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-10-23 19:40:10,562 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-10-23 19:40:10,565 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-10-23 19:40:10,565 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-10-23 19:40:12,980 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:40:12,999 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:40:13,032 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:42:16,347 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 19:42:16,570 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:42:23,786 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 19:42:23,995 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:42:26,126 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 19:42:26,305 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:42:42,807 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/urls.py changed, reloading.
+INFO 2025-10-23 19:42:43,021 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-23 19:42:54,099 log Not Found: /
+WARNING 2025-10-23 19:42:54,099 basehttp "GET / HTTP/1.1" 404 3395
+INFO 2025-10-23 19:42:56,714 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:42:56,730 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:42:56,777 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:42:57,741 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:42:57,754 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:42:57,801 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:42:58,450 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:42:58,461 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:42:58,495 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:42:59,293 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:42:59,307 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:42:59,336 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:00,070 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:00,082 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:00,118 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:00,315 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:00,328 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:00,360 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:00,501 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:00,512 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:00,540 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:00,654 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:00,664 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:00,697 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:00,825 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:00,834 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:00,863 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:01,018 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:01,029 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:01,057 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:01,217 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:01,228 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:01,258 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:28,224 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:43:30,533 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:30,553 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:30,590 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:30,786 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:30,798 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:30,836 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:52,615 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:43:57,471 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:57,489 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:57,524 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:58,700 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:58,711 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:58,744 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:43:59,282 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:43:59,293 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:43:59,323 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:44:15,396 basehttp "GET /health/ HTTP/1.1" 200 48
+INFO 2025-10-23 19:45:59,762 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 19:45:59,995 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:46:01,215 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 19:46:01,348 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:46:07,431 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:07,453 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:07,492 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:08,323 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:08,337 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:08,381 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:09,127 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:09,142 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:09,185 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:10,286 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:10,295 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:10,324 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:10,450 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:10,460 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:10,493 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:10,595 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:10,605 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:10,634 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:10,731 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:10,740 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:10,763 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:10,857 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:10,865 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:10,906 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:21,580 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:21,601 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:21,633 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:22,077 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:22,091 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:22,123 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:22,708 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:22,724 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:22,758 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:23,152 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:23,166 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:23,197 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:23,367 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:23,379 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:23,408 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:23,541 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:23,550 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:23,579 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:23,764 basehttp "GET /api/docs/ HTTP/1.1" 200 4628
+WARNING 2025-10-23 19:46:23,777 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:46:23,808 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:46:37,415 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 19:46:37,648 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:46:56,273 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 19:46:56,539 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:47:06,934 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 19:47:07,203 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:47:15,534 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 19:47:15,749 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 19:47:22,008 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-23 19:47:23,759 log Not Found: /
+WARNING 2025-10-23 19:47:23,759 basehttp "GET / HTTP/1.1" 404 3395
+INFO 2025-10-23 19:47:27,608 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:47:27,627 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:47:27,668 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+INFO 2025-10-23 19:47:49,066 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+WARNING 2025-10-23 19:47:49,076 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2040
+WARNING 2025-10-23 19:47:49,191 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2031
+WARNING 2025-10-23 19:47:52,621 log Not Found: /api/redocs/
+WARNING 2025-10-23 19:47:52,622 basehttp "GET /api/redocs/ HTTP/1.1" 404 3446
+INFO 2025-10-23 19:47:58,907 basehttp "GET /api/redoc/ HTTP/1.1" 200 734
+WARNING 2025-10-23 19:47:58,924 basehttp "GET /static/drf_spectacular_sidecar/redoc/bundles/redoc.standalone.js HTTP/1.1" 404 2031
+INFO 2025-10-23 19:52:11,552 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-23 19:52:12,935 log Not Found: /
+WARNING 2025-10-23 19:52:12,936 basehttp "GET / HTTP/1.1" 404 3395
+INFO 2025-10-23 19:52:17,064 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+INFO 2025-10-23 19:52:17,075 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1510168
+INFO 2025-10-23 19:52:17,223 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+INFO 2025-10-23 19:52:17,231 basehttp "GET /api/schema/ HTTP/1.1" 200 12982
+INFO 2025-10-23 19:52:53,028 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-23 19:55:16,150 autoreload /Users/macshop/Desktop/legal_consultation_backend/settings/settings.py changed, reloading.
+INFO 2025-10-23 20:43:27,249 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:43:45,053 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-23 20:44:11,619 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 20:44:11,812 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:44:42,735 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 20:44:42,942 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:44:50,231 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 20:44:50,359 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:44:53,522 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 20:44:53,664 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:45:46,651 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:45:54,679 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+INFO 2025-10-23 20:45:54,694 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+INFO 2025-10-23 20:45:54,855 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 304 0
+INFO 2025-10-23 20:45:54,869 basehttp "GET /api/schema/ HTTP/1.1" 200 12982
+INFO 2025-10-23 20:45:58,822 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+INFO 2025-10-23 20:45:58,994 basehttp "GET /api/schema/ HTTP/1.1" 200 12982
+INFO 2025-10-23 20:46:13,865 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-23 20:46:35,124 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 20:46:35,348 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:46:37,523 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 20:46:37,747 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:46:40,918 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-23 20:46:41,065 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:46:44,319 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:46:48,572 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-23 20:47:12,114 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 20:47:12,314 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:47:13,473 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 20:47:13,619 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:47:14,754 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 20:47:14,890 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:47:21,116 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 20:47:21,282 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:47:22,429 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 20:47:22,568 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:47:25,726 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 20:47:25,876 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:47:32,118 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 20:47:32,274 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:47:33,404 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 20:47:33,531 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 20:47:37,864 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-23 21:06:32,299 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 21:06:40,362 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-23 21:25:32,336 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 21:25:39,851 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-23 21:28:24,921 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 21:28:25,199 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 21:29:34,956 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-23 21:29:35,211 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 21:29:50,879 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 21:29:59,161 services 📱 Sending WhatsApp to: 998909630283
+DEBUG 2025-10-23 21:29:59,162 services Request URL: https://graph.facebook.com/v18.0/838208962709583/messages
+DEBUG 2025-10-23 21:29:59,162 services Request data: {'messaging_product': 'whatsapp', 'recipient_type': 'individual', 'to': '998909630283', 'type': 'text', 'text': {'preview_url': False, 'body': '\n🔔 New Request For Consultation!\n\n👤 Name: Иван Иванов\n📧 Email: ivan@example.com\n📱 Phone Number: +998995360010\n📋 Consultation: Договоры\n💬 Comments: Нужна помощь с договором аренды\n\n🕐 Time: 2025-10-23 21:29:59\n'}}
+INFO 2025-10-23 21:29:59,768 services Status Code: 400
+DEBUG 2025-10-23 21:29:59,768 services Response: {"error":{"message":"(#100) Invalid parameter","type":"OAuthException","code":100,"error_data":{"messaging_product":"whatsapp","details":"Invalid parameter"},"fbtrace_id":"AyxB11-cNN1fCHJBcrB81jK"}}
+ERROR 2025-10-23 21:29:59,768 services ❌ Failed to send WhatsApp. Status: 400
+ERROR 2025-10-23 21:29:59,768 services Response: {"error":{"message":"(#100) Invalid parameter","type":"OAuthException","code":100,"error_data":{"messaging_product":"whatsapp","details":"Invalid parameter"},"fbtrace_id":"AyxB11-cNN1fCHJBcrB81jK"}}
+ERROR 2025-10-23 21:29:59,769 services Error message: (#100) Invalid parameter
+INFO 2025-10-23 21:29:59,773 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-23 21:44:20,131 autoreload Watching for file changes with StatReloader
+INFO 2025-10-23 21:44:25,874 services 📱 Sending WhatsApp to: 998995360010
+DEBUG 2025-10-23 21:44:25,874 services URL: https://graph.facebook.com/v18.0/838208962709583/messages
+DEBUG 2025-10-23 21:44:25,874 services Payload: {'messaging_product': 'whatsapp', 'recipient_type': 'individual', 'to': '998995360010', 'type': 'text', 'text': {'preview_url': False, 'body': '🔔 New Request For Consultation!\n\n👤 Name: Иван Иванов\n📧 Email: ivan@example.com\n📱 Phone Number: +998995360010\n📋 Consultation: Договоры\n💬 Comments: Нужна помощь с договором аренды\n\n🕐 Time: 2025-10-23 21:44:25'}}
+INFO 2025-10-23 21:44:26,646 services Status: 200
+DEBUG 2025-10-23 21:44:26,646 services Response: {"messaging_product":"whatsapp","contacts":[{"input":"998995360010","wa_id":"998995360010"}],"messages":[{"id":"wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSREREQjBFNDIzMEIzNzlCRTFEAA=="}]}
+INFO 2025-10-23 21:44:26,646 services ✅ WhatsApp sent! Message ID: wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSREREQjBFNDIzMEIzNzlCRTFEAA==
+INFO 2025-10-23 21:44:26,651 basehttp "POST /api/consultation/ HTTP/1.1" 201 294
+INFO 2025-10-24 04:21:49,958 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:22:08,934 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-24 04:22:10,773 log Not Found: /
+WARNING 2025-10-24 04:22:10,773 basehttp "GET / HTTP/1.1" 404 3395
+WARNING 2025-10-24 04:22:10,832 log Not Found: /favicon.ico
+WARNING 2025-10-24 04:22:10,832 basehttp "GET /favicon.ico HTTP/1.1" 404 3446
+INFO 2025-10-24 04:22:16,049 basehttp "GET /api/docs HTTP/1.1" 301 0
+INFO 2025-10-24 04:22:16,061 basehttp "GET /api/docs/ HTTP/1.1" 200 4701
+INFO 2025-10-24 04:22:16,082 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 250335
+INFO 2025-10-24 04:22:16,084 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 155212
+INFO 2025-10-24 04:22:16,086 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1510168
+INFO 2025-10-24 04:22:16,155 basehttp "GET /static/drf_spectacular_sidecar/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+INFO 2025-10-24 04:22:16,162 basehttp "GET /api/schema/ HTTP/1.1" 200 12982
+INFO 2025-10-24 04:22:20,302 services 📱 Sending WhatsApp to: 998995360010
+DEBUG 2025-10-24 04:22:20,302 services URL: https://graph.facebook.com/v18.0/838208962709583/messages
+DEBUG 2025-10-24 04:22:20,302 services Payload: {'messaging_product': 'whatsapp', 'recipient_type': 'individual', 'to': '998995360010', 'type': 'text', 'text': {'preview_url': False, 'body': '🔔 New Request For Consultation!\n\n👤 Name: Иван Иванов\n📧 Email: ivan@example.com\n📱 Phone Number: +998901234567\n📋 Consultation: Договоры\n💬 Comments: Нужна помощь с договором аренды\n\n🕐 Time: 2025-10-24 04:22:20'}}
+INFO 2025-10-24 04:22:21,415 services Status: 200
+DEBUG 2025-10-24 04:22:21,415 services Response: {"messaging_product":"whatsapp","contacts":[{"input":"998995360010","wa_id":"998995360010"}],"messages":[{"id":"wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSRDlGRkJFOERDN0NFMjRCQUE2AA=="}]}
+INFO 2025-10-24 04:22:21,415 services ✅ WhatsApp sent! Message ID: wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSRDlGRkJFOERDN0NFMjRCQUE2AA==
+INFO 2025-10-24 04:22:21,421 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-24 04:25:11,909 services 📱 Sending WhatsApp to: 998995360010
+DEBUG 2025-10-24 04:25:11,909 services URL: https://graph.facebook.com/v18.0/838208962709583/messages
+DEBUG 2025-10-24 04:25:11,909 services Payload: {'messaging_product': 'whatsapp', 'recipient_type': 'individual', 'to': '998995360010', 'type': 'text', 'text': {'preview_url': False, 'body': '🔔 New Request For Consultation!\n\n👤 Name: Иван Иванов\n📧 Email: ivan@example.com\n📱 Phone Number: +998901234567\n📋 Consultation: Договоры\n💬 Comments: Нужна помощь с договором аренды\n\n🕐 Time: 2025-10-24 04:25:11'}}
+INFO 2025-10-24 04:25:12,726 services Status: 200
+DEBUG 2025-10-24 04:25:12,727 services Response: {"messaging_product":"whatsapp","contacts":[{"input":"998995360010","wa_id":"998995360010"}],"messages":[{"id":"wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSNTg0Q0JDRjA0MkY1QTNDRDU2AA=="}]}
+INFO 2025-10-24 04:25:12,727 services ✅ WhatsApp sent! Message ID: wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSNTg0Q0JDRjA0MkY1QTNDRDU2AA==
+INFO 2025-10-24 04:25:12,733 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-24 04:26:50,366 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:26:50,606 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:02,994 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:03,195 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:05,379 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:05,541 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:09,722 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:09,848 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:11,999 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:12,145 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:13,275 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:13,428 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:16,572 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:16,736 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:21,960 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:22,097 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:24,232 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:24,376 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:28,565 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:28,722 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:33,910 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:34,072 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:39,281 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:39,412 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:43,616 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:43,774 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:55,096 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:55,311 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:27:58,501 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:27:58,674 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:28:04,887 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/services.py changed, reloading.
+INFO 2025-10-24 04:28:05,072 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:28:13,969 basehttp "GET /api/consultation/list/ HTTP/1.1" 200 3017
+INFO 2025-10-24 04:28:20,075 basehttp "GET /api/service-types/ HTTP/1.1" 200 444
+INFO 2025-10-24 04:29:23,020 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/views.py changed, reloading.
+INFO 2025-10-24 04:29:23,252 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:29:28,492 autoreload /Users/macshop/Desktop/legal_consultation_backend/legal_form/urls.py changed, reloading.
+INFO 2025-10-24 04:29:28,646 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:52:54,595 autoreload Watching for file changes with StatReloader
+INFO 2025-10-24 04:55:18,424 services 📱 Sending WhatsApp to: 998995360010
+DEBUG 2025-10-24 04:55:18,425 services URL: https://graph.facebook.com/v18.0/838208962709583/messages
+DEBUG 2025-10-24 04:55:18,425 services Payload: {'messaging_product': 'whatsapp', 'recipient_type': 'individual', 'to': '998995360010', 'type': 'text', 'text': {'preview_url': False, 'body': '🔔 New Request For Consultation!\n\n👤 Name: Иван Иванов\n📧 Email: ivan@example.com\n📱 Phone Number: +998901234567\n📋 Consultation: Договоры\n💬 Comments: Нужна помощь с договором аренды\n\n🕐 Time: 2025-10-24 04:55:18'}}
+INFO 2025-10-24 04:55:19,528 services Status: 200
+DEBUG 2025-10-24 04:55:19,528 services Response: {"messaging_product":"whatsapp","contacts":[{"input":"998995360010","wa_id":"998995360010"}],"messages":[{"id":"wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSNjQ2NTM3ODk3RERDRDBDQ0FCAA=="}]}
+INFO 2025-10-24 04:55:19,528 services ✅ WhatsApp sent! Message ID: wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSNjQ2NTM3ODk3RERDRDBDQ0FCAA==
+INFO 2025-10-24 04:55:19,531 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-24 04:58:18,311 services 📱 Sending WhatsApp to: 998995360010
+DEBUG 2025-10-24 04:58:18,312 services URL: https://graph.facebook.com/v18.0/838208962709583/messages
+DEBUG 2025-10-24 04:58:18,312 services Payload: {'messaging_product': 'whatsapp', 'recipient_type': 'individual', 'to': '998995360010', 'type': 'text', 'text': {'preview_url': False, 'body': '🔔 New Request For Consultation!\n\n👤 Name: Иван Иванов\n📧 Email: ivan@example.com\n📱 Phone Number: +998909184343\n📋 Consultation: Договоры\n💬 Comments: Нужна помощь с договором аренды\n\n🕐 Time: 2025-10-24 04:58:18'}}
+INFO 2025-10-24 04:58:19,104 services Status: 200
+DEBUG 2025-10-24 04:58:19,104 services Response: {"messaging_product":"whatsapp","contacts":[{"input":"998995360010","wa_id":"998995360010"}],"messages":[{"id":"wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSMDhEREEyQUM2RkVBNTNEMTYzAA=="}]}
+INFO 2025-10-24 04:58:19,104 services ✅ WhatsApp sent! Message ID: wamid.HBgMOTk4OTk1MzYwMDEwFQIAERgSMDhEREEyQUM2RkVBNTNEMTYzAA==
+INFO 2025-10-24 04:58:19,109 basehttp "POST /api/consultation/ HTTP/1.1" 201 295
+INFO 2025-10-24 06:01:25,611 autoreload Watching for file changes with StatReloader

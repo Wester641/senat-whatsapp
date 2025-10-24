@@ -1,0 +1,57 @@
+name: legal-consultation
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: legal-consultation-db
+    environment:
+      MYSQL_DATABASE: legal_consultation_db
+      MYSQL_USER: legal_user
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD:-legal_password}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD:-root_password}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  legal-backend:
+    build: .
+    container_name: legal-consultation-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+      - DJANGO_SETTINGS_MODULE=settings.settings
+      # MySQL connection
+      - DATABASE_ENGINE=django.db.backends.mysql
+      - DATABASE_NAME=legal_consultation_db
+      - DATABASE_USER=legal_user
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD:-legal_password}
+      - DATABASE_HOST=db
+      - DATABASE_PORT=3306
+    volumes:
+      - media_data:/app/media
+      - logs_data:/app/logs
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/service-types/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  mysql_data:
+  media_data:
+  logs_data:

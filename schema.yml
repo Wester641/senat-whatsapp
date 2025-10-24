@@ -1,0 +1,216 @@
+openapi: 3.0.3
+info:
+  title: Legal Consultation API
+  version: 1.0.0
+  description: API for legal consultation form with WhatsApp integration
+paths:
+  /api/consultation/:
+    post:
+      operationId: consultation_create
+      description: Create a new consultation request and send notification to WhatsApp
+      summary: Create consultation request
+      tags:
+      - Consultation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConsultationRequestRequest'
+            examples:
+              ValidRequest:
+                value:
+                  name: Иван Иванов
+                  email: ivan@example.com
+                  phone: '+998901234567'
+                  service_type: contracts
+                  comment: Нужна помощь с договором аренды
+                summary: Valid request
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ConsultationRequestRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ConsultationRequestRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsultationRequest'
+              examples:
+                SuccessfulResponse:
+                  value:
+                    id: 1
+                    name: Иван Иванов
+                    email: ivan@example.com
+                    phone: '+998901234567'
+                    service_type: contracts
+                    service_type_display: Договоры
+                    comment: Нужна помощь с договором аренды
+                    created_at: '2025-10-23T10:30:00Z'
+                    whatsapp_sent: true
+                  summary: Successful response
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/consultation/list/:
+    get:
+      operationId: consultation_list_list
+      description: Get all consultation requests (admin endpoint)
+      summary: List all consultation requests
+      tags:
+      - Consultation
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ConsultationRequest'
+          description: ''
+  /api/service-types/:
+    get:
+      operationId: service_types_retrieve
+      description: Get all available service types for consultation
+      summary: Get service types
+      tags:
+      - Service Types
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+              examples:
+                ServiceTypesResponse:
+                  value:
+                  - value: court_disputes
+                    label: Суды и Споры
+                  - value: business_registration
+                    label: Регистрация бизнеса
+                  - value: contracts
+                    label: Договоры
+                  - value: business_support
+                    label: Сопровождение Бизнеса
+                  - value: project_organization
+                    label: Организация проектов и фестивалей
+                  - value: personal_injury
+                    label: Личная травма
+                  summary: Service types response
+          description: ''
+components:
+  schemas:
+    ConsultationRequest:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          title: Имя
+          maxLength: 200
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        phone:
+          type: string
+          title: Телефон
+          maxLength: 20
+        service_type:
+          allOf:
+          - $ref: '#/components/schemas/ServiceTypeEnum'
+          title: Тип услуги
+        service_type_display:
+          type: string
+          readOnly: true
+        comment:
+          type: string
+          title: Комментарий
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - created_at
+      - email
+      - id
+      - name
+      - phone
+      - service_type
+      - service_type_display
+    ConsultationRequestRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+          title: Имя
+          maxLength: 200
+        email:
+          type: string
+          format: email
+          minLength: 1
+          maxLength: 254
+        phone:
+          type: string
+          minLength: 1
+          title: Телефон
+          maxLength: 20
+        service_type:
+          allOf:
+          - $ref: '#/components/schemas/ServiceTypeEnum'
+          title: Тип услуги
+        comment:
+          type: string
+          title: Комментарий
+      required:
+      - email
+      - name
+      - phone
+      - service_type
+    ServiceTypeEnum:
+      enum:
+      - court_disputes
+      - business_registration
+      - contracts
+      - business_support
+      - project_organization
+      - personal_injury
+      type: string
+      description: |-
+        * `court_disputes` - Суды и Споры
+        * `business_registration` - Регистрация бизнеса
+        * `contracts` - Договоры
+        * `business_support` - Сопровождение Бизнеса
+        * `project_organization` - Организация проектов и фестивалей
+        * `personal_injury` - Личная травма
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
