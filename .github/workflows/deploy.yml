@@ -46,17 +46,3 @@ jobs:
             echo "✅ Deploy completed successfully!"
             echo "📊 Container status:"
             docker compose logs --tail=50 legal-backend
-
-      - name: Health Check
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          script: |
-            echo "🏥 Waiting for service to start..."
-            sleep 10
-            
-            docker inspect --format='{{.State.Health.Status}}' legal-backend || echo "No healthcheck"
-            
-            echo "✅ Deployment verification complete"
