@@ -40,12 +40,14 @@ services:
       - media_data:/app/media
       - logs_data:/app/logs
       - static_data:/app/staticfiles
+      - /var/www/legal-consultation/staticfiles:/app/staticfiles:ro
+      - /var/www/legal-consultation/media:/app/media:rw
     depends_on:
       db:
         condition: service_healthy
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/api/service-types/"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/"]
       interval: 30s
       timeout: 10s
       retries: 3

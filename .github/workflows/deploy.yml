@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           source: "."
-          target: "/opt/project3"
+          target: "/opt/legal-consultation"
           overwrite: true
 
       - name: Build and restart Docker on VPS
@@ -31,7 +31,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             echo "🚀 Starting deploy for legal-consultation..."
-            cd /opt/project3
+            cd /opt/legal-consultation
 
             docker compose down || true
 
