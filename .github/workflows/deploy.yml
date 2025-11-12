@@ -32,17 +32,9 @@ jobs:
           script: |
             echo "🚀 Starting deploy for legal-consultation..."
             cd /opt/legal-consultation
-
-            docker compose down || true
-
-            docker compose build --no-cache
-
+            git pull origin main || true
+            docker compose build
             docker compose up -d
-
-            docker compose ps
-
-            docker image prune -f
 
             echo "✅ Deploy completed successfully!"
             echo "📊 Container status:"
-            docker compose logs --tail=50 legal-backend
