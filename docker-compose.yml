@@ -37,11 +37,9 @@ services:
       - DATABASE_HOST=db
       - DATABASE_PORT=3306
     volumes:
-      - media_data:/app/media
-      - logs_data:/app/logs
-      - static_data:/app/staticfiles
-      - /var/www/legal-consultation/staticfiles:/app/staticfiles:ro
+      - /var/www/legal-consultation/staticfiles:/app/staticfiles:rw
       - /var/www/legal-consultation/media:/app/media:rw
+      - logs_data:/app/logs
     depends_on:
       db:
         condition: service_healthy
@@ -57,9 +55,7 @@ services:
 
 volumes:
   mysql_data:
-  media_data:
   logs_data:
-  static_data:
 
 networks:
   webnet:
