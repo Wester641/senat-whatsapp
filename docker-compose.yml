@@ -11,26 +11,25 @@ services:
       MYSQL_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD:-root_password}
     volumes:
       - mysql_data:/var/lib/mysql
-    ports:
-      - "3306:3306"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - webnet
 
   legal-backend:
     build: .
-    container_name: legal-consultation-api
-    ports:
-      - "8000:8000"
+    container_name: legal-backend
+    expose:
+      - "8000"
     env_file:
       - .env
     environment:
       - PYTHONPATH=/app
       - DJANGO_SETTINGS_MODULE=settings.settings
-      # MySQL connection
       - DATABASE_ENGINE=django.db.backends.mysql
       - DATABASE_NAME=legal_consultation_db
       - DATABASE_USER=legal_user
@@ -40,6 +39,7 @@ services:
     volumes:
       - media_data:/app/media
       - logs_data:/app/logs
+      - static_data:/app/staticfiles
     depends_on:
       db:
         condition: service_healthy
@@ -50,8 +50,15 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    networks:
+      - webnet
 
 volumes:
   mysql_data:
   media_data:
   logs_data:
+  static_data:
+
+networks:
+  webnet:
+    external: true

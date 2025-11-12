@@ -1,0 +1,64 @@
+name: Auto Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy project files to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          source: "."
+          target: "/opt/project3"
+          overwrite: true
+
+      - name: Build and restart Docker on VPS
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            echo "🚀 Starting deploy for legal-consultation..."
+            cd /opt/project3
+
+            docker compose down || true
+
+            git pull origin main || true
+
+            docker compose build --no-cache
+
+            docker compose up -d
+
+            docker compose ps
+
+            docker image prune -f
+
+            echo "✅ Deploy completed successfully!"
+            echo "📊 Container status:"
+            docker compose logs --tail=50 legal-backend
+
+      - name: Health Check
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            echo "🏥 Waiting for service to start..."
+            sleep 10
+            
+            docker inspect --format='{{.State.Health.Status}}' legal-backend || echo "No healthcheck"
+            
+            echo "✅ Deployment verification complete"
