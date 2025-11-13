@@ -12,13 +12,14 @@ WORKDIR /app
 
 COPY pyproject.toml uv.lock* ./
 
-# Install dependencies including psycopg2
+# Install dependencies including whitenoise
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev
 
 COPY . .
 
-RUN uv run python manage.py collectstatic --noinput
+# Collect static files with whitenoise
+RUN uv run python manage.py collectstatic --noinput --clear
 
 # ─────────────────────────────────────────────
 # 🐳 Stage 2: Runtime - Slim final image
