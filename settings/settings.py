@@ -1,4 +1,5 @@
 import os
+from django.conf.urls.static import static
 from dotenv import load_dotenv
 from pathlib import Path
 

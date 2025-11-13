@@ -37,7 +37,6 @@ services:
       - DATABASE_HOST=db
       - DATABASE_PORT=3306
     volumes:
-      - /var/www/legal-consultation/staticfiles:/app/staticfiles:rw
       - /var/www/legal-consultation/media:/app/media:rw
       - logs_data:/app/logs
     depends_on:
