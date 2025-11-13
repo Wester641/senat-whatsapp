@@ -13,7 +13,16 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-change-this-key-in-product
 # SECURITY WARNING
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv(
+    'ALLOWED_HOSTS', 
+    'localhost,127.0.0.1'
+).split(',')
+
+if not DEBUG:
+    ALLOWED_HOSTS.extend([
+        'api.senatconsulting.com',
+        '.senatconsulting.com',
+    ])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -174,7 +183,31 @@ SPECTACULAR_SETTINGS = {
     "DISABLE_ERRORS_AND_WARNINGS": True,
 }
 
-CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:3000,http://localhost:8080').split(',')
+CORS_ALLOW_ALL_ORIGINS = DEBUG
+
+if not DEBUG:
+    CORS_ALLOWED_ORIGINS = os.getenv(
+        'CORS_ALLOWED_ORIGINS', 
+        'https://senatconsulting.com'
+    ).split(',')
+else:
+    CORS_ALLOWED_ORIGINS = os.getenv(
+        'CORS_ALLOWED_ORIGINS', 
+        'http://localhost:3000,http://localhost:8080'
+    ).split(',')
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 # WhatsApp Settings - Meta Cloud API
 WHATSAPP_ACCESS_TOKEN = os.getenv('WHATSAPP_ACCESS_TOKEN', '')
@@ -220,6 +253,23 @@ LOGGING = {
     },
 }
 
-# Create logs directory if it doesn't exist
 LOGS_DIR = BASE_DIR / 'logs'
 LOGS_DIR.mkdir(exist_ok=True)
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    X_FRAME_OPTIONS = 'DENY'
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    
+    CSRF_TRUSTED_ORIGINS = [
+        'https://api.senatconsulting.com',
+        'https://senatconsulting.com',
+        'https://www.senatconsulting.com',
+        'https://admin.senatconsulting.com',
+    ]
