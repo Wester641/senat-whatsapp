@@ -123,3 +123,50 @@ class ServiceTypeListView(APIView):
             for choice in ServiceType.choices
         ]
         return Response(service_types)
+
+@extend_schema(
+    tags=['Consultation'],
+    summary='List consultation requests',
+    description='Get paginated list of all consultation requests',
+    responses={
+        200: ConsultationRequestSerializer(many=True),
+    },
+    examples=[
+        OpenApiExample(
+            'Consultation requests list',
+            value=[
+                {
+                    'id': 1,
+                    'name': 'Иван Иванов',
+                    'email': 'ivan@example.com',
+                    'phone': '+998901234567',
+                    'service_type': 'contracts',
+                    'service_type_display': 'Договоры',
+                    'comment': 'Нужна помощь с договором аренды',
+                    'created_at': '2025-10-23T10:30:00Z'
+                },
+                {
+                    'id': 2,
+                    'name': 'Петр Петров',
+                    'email': 'petr@example.com',
+                    'phone': '+998907654321',
+                    'service_type': 'court_disputes',
+                    'service_type_display': 'Суды и Споры',
+                    'comment': 'Консультация по судебному спору',
+                    'created_at': '2025-10-22T15:45:00Z'
+                }
+            ],
+            response_only=True,
+        ),
+    ]
+)
+class ConsultationRequestListView(generics.ListAPIView):
+    """
+    Get list of all consultation requests
+    
+    GET /api/consultation/list/
+    - Returns paginated list of consultation requests
+    - Ordered by creation date (newest first)
+    """
+    queryset = ConsultationRequest.objects.all().order_by('-created_at')
+    serializer_class = ConsultationRequestSerializer
