@@ -15,57 +15,33 @@ CONSULTATION_MESSAGE_TEMPLATE = """🔔 New Request For Consultation!
 🕐 Время: {created_at}"""
 
 
-class WhatsAppService:
+class TelegramService:
     """
-    Service for sending messages to WhatsApp using WhatsApp Business API
+    Service for sending messages to Telegram using Telegram Bot API
     """
     
     @staticmethod
-    def format_phone_number(phone):
+    def send_to_chat(chat_id, message):
         """
-        Format phone number for WhatsApp Cloud API
-        """
-        # Remove all non-digits
-        cleaned = ''.join(filter(str.isdigit, str(phone)))
-        return cleaned
-    
-    @staticmethod
-    def send_to_single_recipient(recipient_number, message):
-        """
-        WhatsApp Cloud API (Meta)
+        Send message to Telegram chat using Bot API
         """
         try:
-            url = f"https://graph.facebook.com/v18.0/{settings.WHATSAPP_PHONE_NUMBER_ID}/messages"
-            
-            # Headers
-            headers = {
-                'Authorization': f'Bearer {settings.WHATSAPP_ACCESS_TOKEN}',
-                'Content-Type': 'application/json'
-            }
-            
-            # Format recipient number
-            formatted_number = WhatsAppService.format_phone_number(recipient_number)
+            url = f"https://api.telegram.org/bot{settings.TELEGRAM_BOT_TOKEN}/sendMessage"
             
             # Payload
             payload = {
-                "messaging_product": "whatsapp",
-                "recipient_type": "individual",
-                "to": formatted_number,
-                "type": "text",
-                "text": {
-                    "preview_url": False,
-                    "body": message
-                }
+                "chat_id": chat_id,
+                "text": message,
+                "parse_mode": "HTML"
             }
             
-            logger.info(f"📱 Sending WhatsApp to: {formatted_number}")
+            logger.info(f"📱 Sending Telegram message to chat: {chat_id}")
             logger.debug(f"URL: {url}")
             logger.debug(f"Payload: {payload}")
             
             # Send request
             response = requests.post(
                 url, 
-                headers=headers, 
                 json=payload,
                 timeout=10
             )
@@ -75,22 +51,26 @@ class WhatsAppService:
             
             if response.status_code == 200:
                 response_data = response.json()
-                message_id = response_data.get('messages', [{}])[0].get('id', 'unknown')
-                logger.info(f"✅ WhatsApp sent to {formatted_number}! Message ID: {message_id}")
-                return True, formatted_number
+                if response_data.get('ok'):
+                    message_id = response_data.get('result', {}).get('message_id', 'unknown')
+                    logger.info(f"✅ Telegram message sent to {chat_id}! Message ID: {message_id}")
+                    return True, chat_id
+                else:
+                    logger.error(f"❌ Telegram API returned ok=False: {response_data}")
+                    return False, chat_id
             else:
-                logger.error(f"❌ Failed to send to {formatted_number}: {response.status_code}")
+                logger.error(f"❌ Failed to send to {chat_id}: {response.status_code}")
                 logger.error(f"Response: {response.text}")
-                return False, formatted_number
+                return False, chat_id
             
         except Exception as e:
-            logger.error(f"❌ Exception sending to {recipient_number}: {e}", exc_info=True)
-            return False, recipient_number
+            logger.error(f"❌ Exception sending to {chat_id}: {e}", exc_info=True)
+            return False, chat_id
     
     @staticmethod
-    def send_consultation_request_cloud_api(consultation):
+    def send_consultation_request(consultation):
         """
-        WhatsApp Cloud API (Meta) - Send to multiple recipients
+        Send consultation request to Telegram - supports multiple chats
         """
         try:
             message = CONSULTATION_MESSAGE_TEMPLATE.format(
@@ -102,39 +82,39 @@ class WhatsAppService:
                 created_at=consultation.created_at.strftime("%Y-%m-%d %H:%M:%S")
             ).strip()
             
-            recipient_numbers = settings.WHATSAPP_RECIPIENT_NUMBER
+            chat_ids = settings.TELEGRAM_CHAT_IDS
             
-            if isinstance(recipient_numbers, str):
-                recipient_numbers = [num.strip() for num in recipient_numbers.split(',')]
+            if isinstance(chat_ids, str):
+                chat_ids = [chat_id.strip() for chat_id in chat_ids.split(',')]
             
-            recipient_numbers = [num for num in recipient_numbers if num]
+            chat_ids = [chat_id for chat_id in chat_ids if chat_id]
             
-            if not recipient_numbers:
-                logger.error("❌ No recipient numbers configured!")
+            if not chat_ids:
+                logger.error("❌ No chat IDs configured!")
                 return False
             
-            logger.info(f"📤 Sending to {len(recipient_numbers)} recipient(s)")
+            logger.info(f"📤 Sending to {len(chat_ids)} chat(s)")
             
             results = []
             success_count = 0
             
-            for recipient in recipient_numbers:
-                success, number = WhatsAppService.send_to_single_recipient(recipient, message)
+            for chat_id in chat_ids:
+                success, chat = TelegramService.send_to_chat(chat_id, message)
                 results.append({
-                    'number': number,
+                    'chat_id': chat,
                     'success': success
                 })
                 if success:
                     success_count += 1
             
-            logger.info(f"📊 Summary: {success_count}/{len(recipient_numbers)} messages sent successfully")
+            logger.info(f"📊 Summary: {success_count}/{len(chat_ids)} messages sent successfully")
             
             for result in results:
                 status = "✅" if result['success'] else "❌"
-                logger.info(f"{status} {result['number']}")
+                logger.info(f"{status} {result['chat_id']}")
             
             return success_count > 0
             
         except Exception as e:
-            logger.error(f"❌ Exception in send_consultation_request_cloud_api: {e}", exc_info=True)
+            logger.error(f"❌ Exception in send_consultation_request: {e}", exc_info=True)
             return False

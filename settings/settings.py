@@ -220,10 +220,9 @@ CORS_ALLOW_HEADERS = [
     'x-requested-with',
 ]
 
-# WhatsApp Settings - Meta Cloud API
-WHATSAPP_ACCESS_TOKEN = os.getenv('WHATSAPP_ACCESS_TOKEN', '')
-WHATSAPP_PHONE_NUMBER_ID = os.getenv('WHATSAPP_PHONE_NUMBER_ID', '')
-WHATSAPP_RECIPIENT_NUMBER = os.getenv('WHATSAPP_RECIPIENT_NUMBER', '+998901234567')
+# Telegram Settings - Bot API
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN', '')
+TELEGRAM_CHAT_IDS = os.getenv('TELEGRAM_CHAT_IDS', '-1003109762472')
 
 # Logging Configuration
 LOGGING = {
