@@ -9,7 +9,7 @@ import logging
 
 from .models import ConsultationRequest, ServiceType
 from .serializers import ConsultationRequestSerializer
-from .services import WhatsAppService
+from .services import TelegramService
 
 logger = logging.getLogger(__name__)
 
@@ -68,7 +68,7 @@ class ConsultationRequestCreateView(generics.CreateAPIView):
         # Send WhatsApp in background thread (user doesn't wait!)
         def send_whatsapp():
             try:
-                WhatsAppService.send_consultation_request_cloud_api(consultation)
+                TelegramService.send_consultation_request_cloud_api(consultation)
             except Exception as e:
                 logger.error(f"Failed to send WhatsApp for consultation {consultation.id}: {e}")
 
