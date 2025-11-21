@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 @extend_schema(
     tags=['Consultation'],
     summary='Create consultation request',
-    description='Create a new consultation request and send WhatsApp notification in background',
+    description='Create a new consultation request and send Telegram notification in background',
     request=ConsultationRequestSerializer,
     responses={
         201: ConsultationRequestSerializer,
@@ -54,7 +54,7 @@ logger = logging.getLogger(__name__)
 )
 class ConsultationRequestCreateView(generics.CreateAPIView):
     """
-    Create consultation request and send WhatsApp notification asynchronously
+    Create consultation request and send Telegram notification asynchronously
     """
     queryset = ConsultationRequest.objects.all()
     serializer_class = ConsultationRequestSerializer
@@ -65,14 +65,14 @@ class ConsultationRequestCreateView(generics.CreateAPIView):
         serializer.is_valid(raise_exception=True)
         consultation = serializer.save()
 
-        # Send WhatsApp in background thread (user doesn't wait!)
-        def send_whatsapp():
+        # Send Telegram in background thread (user doesn't wait!)
+        def send_telegram():
             try:
-                TelegramService.send_consultation_request_cloud_api(consultation)
+                TelegramService.send_consultation_request(consultation)
             except Exception as e:
-                logger.error(f"Failed to send WhatsApp for consultation {consultation.id}: {e}")
+                logger.error(f"Failed to send Telegram for consultation {consultation.id}: {e}")
 
-        thread = threading.Thread(target=send_whatsapp)
+        thread = threading.Thread(target=send_telegram)
         thread.daemon = True
         thread.start()
 

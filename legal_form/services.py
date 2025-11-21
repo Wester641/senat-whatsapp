@@ -72,6 +72,20 @@ class TelegramService:
         """
         Send consultation request to Telegram - supports multiple chats
         """
+        return TelegramService.send_consultation_request_telegram(consultation)
+    
+    @staticmethod
+    def send_consultation_request_cloud_api(consultation):
+        """
+        Alias for compatibility with old WhatsApp code
+        """
+        return TelegramService.send_consultation_request_telegram(consultation)
+    
+    @staticmethod
+    def send_consultation_request_telegram(consultation):
+        """
+        Send consultation request to Telegram - supports multiple chats
+        """
         try:
             message = CONSULTATION_MESSAGE_TEMPLATE.format(
                 name=consultation.name,
