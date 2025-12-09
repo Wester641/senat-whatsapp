@@ -23,6 +23,9 @@ if not DEBUG:
     ALLOWED_HOSTS.extend([
         'api.senatconsulting.com',
         '.senatconsulting.com',
+        'senat-consulting.vercel.app',
+        'http://localhost:3033',
+        
     ])
 
 INSTALLED_APPS = [
