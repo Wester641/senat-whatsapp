@@ -51,6 +51,9 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    resources:
+      limits:
+        memory: 1g
     networks:
       - webnet
 
