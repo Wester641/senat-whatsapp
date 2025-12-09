@@ -14,19 +14,24 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-change-this-key-in-product
 # SECURITY WARNING
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv(
-    'ALLOWED_HOSTS', 
-    'localhost,127.0.0.1'
-).split(',')
+# Fix ALLOWED_HOSTS with proper whitespace handling
+ALLOWED_HOSTS = [
+    host.strip() 
+    for host in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+    if host.strip()  # Remove empty strings
+]
 
+# Additional hosts (always included)
 ADDITIONAL_HOSTS = [
     'api.senatconsulting.com',
     '.senatconsulting.com',
     'senat-consulting.vercel.app',
     'localhost',
+    '127.0.0.1',
 ]
 
-ALLOWED_HOSTS.extend(ADDITIONAL_HOSTS)
+# Combine and remove duplicates
+ALLOWED_HOSTS = list(set(ALLOWED_HOSTS + ADDITIONAL_HOSTS))
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -276,3 +281,6 @@ if not DEBUG:
         'https://www.senatconsulting.com',
         'https://admin.senatconsulting.com',
     ]
+
+if DEBUG:
+    print(f"ALLOWED_HOSTS: {ALLOWED_HOSTS}")
