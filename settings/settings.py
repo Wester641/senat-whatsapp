@@ -14,24 +14,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-change-this-key-in-product
 # SECURITY WARNING
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-# Fix ALLOWED_HOSTS with proper whitespace handling
-ALLOWED_HOSTS = [
-    host.strip() 
-    for host in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
-    if host.strip()  # Remove empty strings
-]
-
-# Additional hosts (always included)
-ADDITIONAL_HOSTS = [
-    'api.senatconsulting.com',
-    '.senatconsulting.com',
-    'senat-consulting.vercel.app',
-    'localhost',
-    '127.0.0.1',
-]
-
-# Combine and remove duplicates
-ALLOWED_HOSTS = list(set(ALLOWED_HOSTS + ADDITIONAL_HOSTS))
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -54,8 +37,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -203,18 +186,13 @@ SPECTACULAR_SETTINGS = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
-
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = [
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
+CORS_ALLOW_HEADERS = ['*']
+CORS_ALLOW_METHODS = ['*']
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://*',
+    'https://*',
 ]
 
 # Telegram Settings - Bot API
@@ -263,24 +241,10 @@ LOGGING = {
 LOGS_DIR = BASE_DIR / 'logs'
 LOGS_DIR.mkdir(exist_ok=True)
 
-if not DEBUG:
-    SECURE_SSL_REDIRECT = False
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    SECURE_BROWSER_XSS_FILTER = True
-    SECURE_CONTENT_TYPE_NOSNIFF = True
-    X_FRAME_OPTIONS = 'DENY'
-    SECURE_HSTS_SECONDS = 31536000
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    SECURE_HSTS_PRELOAD = True
-    
-    CSRF_TRUSTED_ORIGINS = [
-        'https://api.senatconsulting.com',
-        'https://senatconsulting.com',
-        'https://www.senatconsulting.com',
-        'https://admin.senatconsulting.com',
-    ]
-
-if DEBUG:
-    print(f"ALLOWED_HOSTS: {ALLOWED_HOSTS}")
+SECURE_SSL_REDIRECT = False
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_BROWSER_XSS_FILTER = False
+SECURE_CONTENT_TYPE_NOSNIFF = False
+X_FRAME_OPTIONS = 'ALLOWALL'
