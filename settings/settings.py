@@ -19,6 +19,15 @@ ALLOWED_HOSTS = os.getenv(
     'localhost,127.0.0.1'
 ).split(',')
 
+ADDITIONAL_HOSTS = [
+    'api.senatconsulting.com',
+    '.senatconsulting.com',
+    'senat-consulting.vercel.app',
+    'http://localhost:3033',
+]
+
+ALLOWED_HOSTS.extend(ADDITIONAL_HOSTS)
+
 if not DEBUG:
     ALLOWED_HOSTS.extend([
         'api.senatconsulting.com',
