@@ -23,19 +23,10 @@ ADDITIONAL_HOSTS = [
     'api.senatconsulting.com',
     '.senatconsulting.com',
     'senat-consulting.vercel.app',
-    'http://localhost:3033',
+    'localhost',
 ]
 
 ALLOWED_HOSTS.extend(ADDITIONAL_HOSTS)
-
-if not DEBUG:
-    ALLOWED_HOSTS.extend([
-        'api.senatconsulting.com',
-        '.senatconsulting.com',
-        'senat-consulting.vercel.app',
-        'http://localhost:3033',
-        
-    ])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -206,18 +197,7 @@ SPECTACULAR_SETTINGS = {
     "DISABLE_ERRORS_AND_WARNINGS": True,
 }
 
-CORS_ALLOW_ALL_ORIGINS = DEBUG
-
-if not DEBUG:
-    CORS_ALLOWED_ORIGINS = os.getenv(
-        'CORS_ALLOWED_ORIGINS', 
-        'https://senatconsulting.com'
-    ).split(',')
-else:
-    CORS_ALLOWED_ORIGINS = os.getenv(
-        'CORS_ALLOWED_ORIGINS', 
-        'http://localhost:3000,http://localhost:8080'
-    ).split(',')
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
